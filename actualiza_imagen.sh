@@ -27,5 +27,3 @@
                         sleep 5
                         exit
                         fi
-                        #esto es una prueba
-                        #segunada prueba
