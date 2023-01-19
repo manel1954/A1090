@@ -1,6 +1,5 @@
 #!/bin/bash
                         cd /home/pi/.local
-                        sudo rm -R A1090
                         git clone http://github.com/manel1954/A1090
                         sleep 2
                         if [ -f /home/pi/.local/A1090/aviso ]
