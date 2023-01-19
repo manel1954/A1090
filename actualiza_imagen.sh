@@ -39,4 +39,5 @@
                         sudo rm -R /home/pi/.local/A1090
                         echo "${GRIS}"
                         sleep 5
-                        exi
+                        exit
+                        fi
