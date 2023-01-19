@@ -21,7 +21,7 @@ usuario="$usuario"
 SCRIPTS_version="A108"
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 
-version="D1090-"
+version="D1090"
 version=$version$actualizacion
 
 #pone todos los status de inicio en OFF
