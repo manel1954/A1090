@@ -20,7 +20,7 @@ cd /home/pi/AMBE_SERVER
 
 sudo killall AMBEserver
 sleep 1
- xterm -geometry 58x10+1274+664 -bg blue -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_AMBE_SERVER -e sudo ./AMBEserver -p $puerto_router -i $puerto_modem -s $baut_rate
+ xterm -geometry 58x9+1274+664 -bg blue -fg white -fa ‘verdana’ -fs 9x -T CONSOLA_AMBE_SERVER -e sudo ./AMBEserver -p $puerto_router -i $puerto_modem -s $baut_rate
 
 
 cd /home/pi/Desktop
