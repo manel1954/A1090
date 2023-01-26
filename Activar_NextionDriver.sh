@@ -22,7 +22,7 @@ clear
 echo "${VERDE}"
 echo " *********************************************************************"
 echo " * *                                                                 *"
-echo " * <<<<<<<<<<<<<<<<<< ACTIVANDO NextionDriver >>>>>>>>>>>>>>>>>>>>>> vnvnvnvnvnvnvvnvnvn*"
+echo " * 26-01-12023<<<<<<<<<<<<<<<<<< ACTIVANDO NextionDriver >>>>>>>>>>>>>>>>>>>>>> vnvnvnvnvnvnvvnvnvn*"
 echo " *                                                                   *"
 echo " *********************************************************************"
 sleep 3
