@@ -22,9 +22,9 @@ if [ "$stick" = 'RSP1' ];then
 xterm -geometry 88x51+22+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090_sdrplay/dump1090 --net --interactive --dev-sdrplay --net-ro-port $puerto --ppm $ppm --net-http-port $http
 
 elif [ "$gain" = '-10' ];then
-xterm -geometry 88x56+22+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $puerto --gain $gain --ppm $ppm --net-http-port $http
+xterm -geometry 88x51+22+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $puerto --gain $gain --ppm $ppm --net-http-port $http
 else
-xterm -geometry 88x56+22+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $puerto --ppm $ppm --net-http-port $http
+xterm -geometry 88x52+22+0 -bg black -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $puerto --ppm $ppm --net-http-port $http
 fi
 
 
