@@ -10,7 +10,7 @@ sed -i "10c Name[es_ES]=Cerrar Dump1090" /home/pi/Abrir_BlueDV.desktop
 cd /home/pi
 sudo cp Abrir_BlueDV.desktop /home/pi/Desktop
 sudo rm /home/pi/Abrir_BlueDV.desktop
-cd /home/pi/dump1090
+#cd /home/pi/dump1090
 
 stick=$(awk "NR==40" /home/pi/status.ini)
 puerto=$(awk "NR==42" /home/pi/status.ini)
