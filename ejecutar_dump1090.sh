@@ -22,7 +22,7 @@ if [ "$stick" = 'RSP1' ];then
 xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --dev-sdrplay --net-ro-port $puerto --ppm $ppm --net-http-port $http
 
 elif [ "$gain" = 'autogain' ];then
-xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --net-ro-port $puerto --gain $gain --ppm $ppm --net-http-port $http
+xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --net-ro-port $puerto --gain -10 --ppm $ppm --net-http-port $http
 else
 xterm -geometry 88x17+22+0 -bg brown -fg white -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo ./dump1090 --enable-agc --net --interactive --net-ro-port $puerto --ppm $ppm --net-http-port $http
 fi
