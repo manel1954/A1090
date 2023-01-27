@@ -13,18 +13,19 @@ sudo rm /home/pi/Abrir_BlueDV.desktop
 #cd /home/pi/dump1090
 
 stick=$(awk "NR==40" /home/pi/status.ini)
-puerto=$(awk "NR==42" /home/pi/status.ini)
+raw=$(awk "NR==42" /home/pi/status.ini)
 ppm=$(awk "NR==44" /home/pi/status.ini)
 http=$(awk "NR==46" /home/pi/status.ini)
 gain=$(awk "NR==48" /home/pi/status.ini)
+beast=$(awk "NR==50" /home/pi/status.ini)
 
 if [ "$stick" = 'RSP1' ];then
-xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090_sdrplay/dump1090 --net --interactive --dev-sdrplay --net-ro-port $puerto --ppm $ppm --net-http-port $http
+xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090_sdrplay/dump1090 --net --interactive --dev-sdrplay --net-ro-port $raw --net-bo-port $beast --ppm $ppm --net-http-port $http
 
 elif [ "$gain" = '-10' ];then
-xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $puerto --gain $gain --ppm $ppm --net-http-port $http
+xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $raw --net-bo-port $beast --gain $gain --ppm $ppm --net-http-port $http
 else
-xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $puerto --ppm $ppm --net-http-port $http
+xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/pi/dump1090/dump1090 --net --interactive --net-ro-port $raw --net-bo-port $beast --ppm $ppm --net-http-port $http
 fi
 
 
