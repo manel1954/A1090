@@ -8,7 +8,7 @@
                         cp -R /home/pi/.local/D1090 /home/pi
                         cd /home/pi
                         mv D1090 A108
-                        #sudo chmod 777 -R A108
+                        sudo chmod 777 -R A108
                         cd /home/pi/.local
                         sudo rm -R D1090
 
