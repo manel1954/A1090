@@ -1,16 +1,6 @@
 ﻿#!/bin/bash
 Dvswitch=$(awk "NR==18" /home/pi/status.ini)
-if [ "$Dvswitch" = 'DVSWITCH=OFF' ];then
-sudo systemctl stop ysfgateway.service
-sudo systemctl stop dmr2ysf.service
-sudo systemctl stop analog_bridge.service
-sudo systemctl stop ircddbgateway.service
-sudo systemctl stop md380-emu.service
-sudo systemctl stop mmdvm_bridge.service
-sudo systemctl stop nxdngateway.service
-else
-# los servicios arrancan al iniciar la imagen
-fi
+
 
 ambe3003=$(awk "NR==24" /home/pi/status.ini)
 if [ "$ambe3003" = 'AMBE3003=OFF' ];then
@@ -266,4 +256,14 @@ sudo rm -R /home/pi/A108/Desktop/associacioader.com
 sudo rm /home/pi/A108/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 
-
+if [ "$Dvswitch" = 'DVSWITCH=OFF' ];then
+sudo systemctl stop ysfgateway.service
+sudo systemctl stop dmr2ysf.service
+sudo systemctl stop analog_bridge.service
+sudo systemctl stop ircddbgateway.service
+sudo systemctl stop md380-emu.service
+sudo systemctl stop mmdvm_bridge.service
+sudo systemctl stop nxdngateway.service
+else
+# los servicios arrancan al iniciar la imagen
+fi
