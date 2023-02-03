@@ -253,6 +253,8 @@ sudo rm -R /home/pi/A108/Desktop/associacioader.com
 sudo rm /home/pi/A108/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 
+sleep 10
+
 dvsw=$(awk "NR==18" /home/pi/status.ini)
 if [ "$dvsw" == 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
