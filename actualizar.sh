@@ -258,7 +258,7 @@ sudo rm /home/pi/Desktop/st-data
 sleep 10
 
 Dvswitch=$(awk "NR==18" /home/pi/status.ini)
-if [ "$Dvswitch" = 'DVSWITCH=ON' ];then
+if [ "$Dvswitch" == 'DVSWITCH=ON' ];then
 # los servicios arrancan al iniciar la imagen
 else
 sudo systemctl stop ysfgateway.service
