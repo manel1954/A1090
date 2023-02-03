@@ -9,7 +9,7 @@
                         cd /home/pi/A108
                         echo "hay una nueva actualización"
                         sleep 5
-                        sudo sed -i "60c 1.1.0" /home/pi/status.ini
+                        sed -i "60c 1.1.0" /home/pi/status.ini
                         fi
                         
                         
@@ -23,7 +23,7 @@
                         cp -R /home/pi/.local/D1090 /home/pi
                         cd /home/pi
                         mv D1090 A108
-                        sudo chmod 777 -R A108
+                        chmod 777 -R A108
                         cd /home/pi/.local
                         sudo rm -R D1090
 
