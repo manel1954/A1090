@@ -9,7 +9,7 @@
                         cd /home/pi/A108
                         echo "hay una nueva actualización"
                         sleep 5
-                        sed -i "1c 1.0.0" /home/pi/.local/actualizacion.txt
+                        sed -i "1c 1.0.0" /home/pi/status.ini
                         fi
                         
                         
