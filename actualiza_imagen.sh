@@ -1,6 +1,6 @@
 #!/bin/bash
-                        actualizacion=$(awk "NR==1" /home/pi/.local/actualizacion.txt)
-                        if [ $actualizacion = "1.1.0" ];then
+                        actualizacion=$(awk "NR==60" /home/pi/status.ini)
+                        if [ $actualizacion = "1.0.0" ];then
                         cd /home/pi/A108
                         echo "no hay actualizaciones"
                         sleep 5
@@ -9,7 +9,7 @@
                         cd /home/pi/A108
                         echo "hay una nueva actualización"
                         sleep 5
-                        sed -i "1c 1.1.0" /home/pi/.local/actualizacion.txt
+                        sed -i "1c 1.0.0" /home/pi/.local/actualizacion.txt
                         fi
                         
                         
