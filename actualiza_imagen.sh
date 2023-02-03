@@ -1,4 +1,15 @@
 #!/bin/bash
+                        actualizacion=$(awk "NR==1" /home/pi/.local/actualizacion.txt)
+                        if [ $actualizacion = "1.0.0" ];then
+                        cd /home/pi/A108
+                        ./qt_editor_radio
+                        else
+                        cd /home/pi/A108
+                        ./qt_editor_bm                        
+                        fi
+                        
+                        
+                        
                         cd /home/pi/.local
                         git clone http://github.com/manel1954/D1090
                         sleep 2
