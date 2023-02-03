@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-Dvswitch=$(awk "NR==24" /home/pi/status.ini)
+Dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$Dvswitch" = 'DVSWITCH=ON' ];then
 # los servicios arrancan al iniciar la imagen
 else
