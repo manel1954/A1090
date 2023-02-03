@@ -1,9 +1,4 @@
 ﻿#!/bin/bash
-
-sed -i "20c MARCA_DVSWITCH=OFF" /home/pi/status.ini
-
-sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
-
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
 cd /home/pi/Desktop
@@ -17,7 +12,6 @@ sudo rm /home/pi/Activar_dvswitch.desktop
 
 sudo systemctl stop ysfgateway.service
 sudo systemctl stop dmr2ysf.service
-
 sudo systemctl stop analog_bridge.service
 sudo systemctl stop ircddbgateway.service
 sudo systemctl stop md380-emu.service
@@ -27,6 +21,5 @@ sudo systemctl stop nxdngateway.service
 #zenity --info --ok-label= --title=DVSWITCH --window-icon=/home/pi/A108/ICONO_DVSWITCH_OFF.png --width=400 --timeout=5 --text "\n\n\nDVSWITCH DESACTIVADO"
 
 /home/pi/A108/./qt_dvswitch_desactivado
-cd /home/pi/A108
-sudo sh cerrar_solodstar.sh
-sudo sh cerrar_ircDDB.sh
+sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
+
