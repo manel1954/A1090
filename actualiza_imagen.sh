@@ -1,11 +1,15 @@
 #!/bin/bash
                         actualizacion=$(awk "NR==1" /home/pi/.local/actualizacion.txt)
-                        if [ $actualizacion = "1.0.0" ];then
+                        if [ $actualizacion = "1.1.0" ];then
                         cd /home/pi/A108
-                        ./qt_editor_radio
+                        echo "no hay actualizaciones"
+                        sleep 5
+                        exit;
                         else
                         cd /home/pi/A108
-                        ./qt_editor_bm                        
+                        echo "hay una nueva actualización"
+                        sleep 5
+                        sed -i "1c 1.1.0" /home/pi/.local/actualizacion.txt
                         fi
                         
                         
