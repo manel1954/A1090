@@ -257,25 +257,8 @@ sudo rm /home/pi/A108/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 
 if [ "$Dvswitch" = 'DVSWITCH=OFF' ];then
-sudo systemctl restart ysfgateway.service
-sudo systemctl restart dmr2ysf.service
-sudo systemctl restart analog_bridge.service
-sudo systemctl restart ircddbgateway.service
-sudo systemctl restart md380-emu.service
-sudo systemctl restart mmdvm_bridge.service
-sudo systemctl restart nxdngateway.service
-sleep 2
-sudo systemctl stop ysfgateway.service
-sudo systemctl stop dmr2ysf.service
-sudo systemctl stop analog_bridge.service
-sudo systemctl stop ircddbgateway.service
-sudo systemctl stop md380-emu.service
-sudo systemctl stop mmdvm_bridge.service
-sudo systemctl stop nxdngateway.service
-
-
-
-
+cd /home/pi/A108
+sudo stop_dvswitch.sh
 else
-# los servicios arrancan al iniciar la imagen
+sudo ejecutar_dvswitch.sh
 fi
