@@ -37,10 +37,11 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 #sed -i "18c DVSWITCH=OFF" $usuario/status.ini
 sed -i "19c DMRGateway=OFF" $usuario/status.ini
 #sed -i "22c NEXTIONDRIVER=OFF" $usuario/status.ini
+
 #Actualiza Imagen
-cd /home/pi/.local/D1090
-git pull
-sleep 2
+#cd /home/pi/A108
+#git pull
+#sleep 2
 
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
