@@ -38,7 +38,7 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 sed -i "19c DMRGateway=OFF" $usuario/status.ini
 #sed -i "22c NEXTIONDRIVER=OFF" $usuario/status.ini
 #Actualiza Imagen
-cd $usuario/$SCRIPTS_version
+cd /home/pi/.local/D1090
 git pull
 sleep 2
 
