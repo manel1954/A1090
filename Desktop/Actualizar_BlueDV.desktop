@@ -1,13 +1,13 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=sh -c "cd /home/pi/A108;ls"
-Icon=/home/pi/A108/ICONO_TRANSPARENTE.png
+Exec=sh -c "cd /home/pi/A108;./qt_OpenEditorVirtualRadar"
+Icon=/home/pi/A108/ICONO_DITOR_VIRTUALRADAR.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
 Name[en_US]=MMDVM Connect Screen
 Terminal=false
-Name[es_ES]=.
+Name[es_ES]=Editar VirtualRadar
 Hidden=false
 Comment[es_ES]=
