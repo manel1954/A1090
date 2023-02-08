@@ -1,2 +1,3 @@
 #!bin/bash
-vrs  -stopbg
+#vrs -stopbg
+vrs -disable

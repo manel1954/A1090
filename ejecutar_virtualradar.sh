@@ -1,2 +1,3 @@
 #!bin/bash
-vrs  -startbg
+#vrs  -startbg
+vrs  -enable
