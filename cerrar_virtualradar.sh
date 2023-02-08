@@ -1,2 +1,2 @@
 #!bin/bash
-vrs  -stoptbg
+vrs  -stopbg
