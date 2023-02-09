@@ -64,11 +64,6 @@ sed -i "17c NXDN=OFF" $usuario/status.ini
 sed -i "19c DMRGateway=OFF" $usuario/status.ini
 #sed -i "22c NEXTIONDRIVER=OFF" $usuario/status.ini
 
-#Actualiza Imagen
-#cd /home/pi/A108
-#git pull
-#sleep 2
-
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 sudo cp $usuario/Desktop/Activar_dvswitch.desktop $usuario/.local #deja el icono en el estado que se reinició
 sudo cp $usuario/Desktop/Activar_NextionDriver.desktop $usuario/.local/Activar_NextionDriver.desktop_1 #deja el icono en el estado que se reinició
@@ -92,14 +87,6 @@ frplus=`sed -n '13p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
 indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVMBM.ini)
 ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVMBM.ini)
 frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVMBM.ini)
-#master=`grep -n -m 1 "^RemoteAddress=" $usuario/MMDVMHost/MMDVMBM.ini`
-#buscar=":"
-#largo=`expr index $master $buscar`
-#largo=`expr $largo + 1`
-#largo1=`expr $largo - 2`
-#largo=`expr substr $master 1 $largo1`
-#letra=c            
-#linea_master=$largo$letra
 masterbm=$(awk "NR==232" $usuario/MMDVMHost/MMDVMBM.ini)
 masterbm=`expr substr $masterbm 15 30`
 sed -i "1c $indi" $usuario/info_panel_control.ini
@@ -167,7 +154,6 @@ sudo echo 1 > /sys/class/gpio/gpio20/value
 sudo sleep 0.5
 sudo echo 20 > /sys/class/gpio/unexport
 sudo echo 21 > /sys/class/gpio/unexport
-# cp $usuario/$SCRIPTS_version/panel_control.php /var/www/html/panel_control 
 bm=`sed -n '2p'  $usuario/MMDVMHost/MMDVMBM.ini`
 plus=`sed -n '2p'  $usuario/MMDVMHost/MMDVMPLUS.ini`
 dstar=`sed -n '2p'  $usuario/MMDVMHost/MMDVMDSTAR.ini`
