@@ -10,7 +10,6 @@ sudo systemctl stop md380-emu.service
 sudo systemctl stop mmdvm_bridge.service
 sudo systemctl stop nxdngateway.service
 sudo systemctl stop p25gateway.service
-
 else
 echo "no hace nada"  
 fi
@@ -31,15 +30,13 @@ cd /home/pi/A108/
 sh cerrar_virtualradar.sh  
 fi
 
-
-
 # path usuario
 usuario="/home/pi"
 usuario="$usuario"
 SCRIPTS_version="A108"
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 
-version="A109-"
+version="1090-"
 version=$version$actualizacion
 
 #pone todos los status de inicio en OFF
