@@ -1,4 +1,16 @@
-﻿#!/bin/bash
+#!/bin/bash
+
+dvswitch=$(awk "NR==18" /home/pi/status.ini)
+if [ "$dvswitch" = 'DVSWITCH=OFF' ];then
+
+sudo systemctl stop analog_bridge.service
+sudo systemctl stop md380-emu.service
+sudo systemctl stop mmdvm_bridge.service
+sudo systemctl stop nxdngateway.service
+sudo systemctl stop ircddbgatewayd.service
+else
+echo "no hace nada"  
+fi
 
 ambe3003=$(awk "NR==24" /home/pi/status.ini)
 if [ "$ambe3003" = 'AMBE3003=OFF' ];then
@@ -7,18 +19,14 @@ else
 sudo systemctl start AMBEServer3003 
 fi
 
-
-#virtualradar=$(awk "NR==60" /home/pi/status.ini)
-#if [ "$virtualradar" = 'VirtualRadar=enable' ];then
-#cd /home/pi/A108/
-#sh ejecutar_virtualradar.sh 
-#else
-#cd /home/pi/A108/
-#sh cerrar_virtualradar.sh  
-#fi
-
-
-
+virtualradar=$(awk "NR==60" /home/pi/status.ini)
+if [ "$virtualradar" = 'VirtualRadar=enable' ];then
+cd /home/pi/A108/
+sh ejecutar_virtualradar.sh 
+else
+cd /home/pi/A108/
+sh cerrar_virtualradar.sh  
+fi
 
 
 
@@ -269,5 +277,3 @@ sudo rm -R /home/pi/A108/associacioader.com
 sudo rm -R /home/pi/A108/Desktop/associacioader.com
 sudo rm /home/pi/A108/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
-
-
