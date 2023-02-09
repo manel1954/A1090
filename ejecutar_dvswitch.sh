@@ -19,7 +19,7 @@ sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
 #zenity --info --ok-label= --title=DVSWITCH --window-icon=/home/pi/A108/ICONO_DVSWITCH_ON.png --width=400 --timeout=5 --text "\n\nDVSWITCH ACTIVADO"
-
+sed -i "18c DVSWITCH=ON" /home/pi/status.ini
 /home/pi/A108/./qt_dvswitch_activado
-sed -i "18c DVSWITCH=ON" /home/pi/status.ini	
+	
 			

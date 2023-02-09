@@ -19,7 +19,7 @@ sudo systemctl stop mmdvm_bridge.service
 sudo systemctl stop nxdngateway.service
 
 #zenity --info --ok-label= --title=DVSWITCH --window-icon=/home/pi/A108/ICONO_DVSWITCH_OFF.png --width=400 --timeout=5 --text "\n\n\nDVSWITCH DESACTIVADO"
-
-/home/pi/A108/./qt_dvswitch_desactivado
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
+/home/pi/A108/./qt_dvswitch_desactivado
+
 
