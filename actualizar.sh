@@ -8,14 +8,14 @@ sudo systemctl start AMBEServer3003
 fi
 
 
-virtualradar=$(awk "NR==60" /home/pi/status.ini)
-if [ "$virtualradar" = 'VirtualRadar=enable' ];then
-cd /home/pi/A108/
-sh ejecutar_virtualradar.sh 
-else
-cd /home/pi/A108/
-sh cerrar_virtualradar.sh  
-fi
+#virtualradar=$(awk "NR==60" /home/pi/status.ini)
+#if [ "$virtualradar" = 'VirtualRadar=enable' ];then
+#cd /home/pi/A108/
+#sh ejecutar_virtualradar.sh 
+#else
+#cd /home/pi/A108/
+#sh cerrar_virtualradar.sh  
+#fi
 
 
 
