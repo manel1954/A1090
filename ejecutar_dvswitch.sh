@@ -17,6 +17,8 @@ sudo systemctl restart ircddbgateway.service
 sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
+sudo systemctl restart p25gateway.service
+
 
 #zenity --info --ok-label= --title=DVSWITCH --window-icon=/home/pi/A108/ICONO_DVSWITCH_ON.png --width=400 --timeout=5 --text "\n\nDVSWITCH ACTIVADO"
 sed -i "18c DVSWITCH=ON" /home/pi/status.ini
