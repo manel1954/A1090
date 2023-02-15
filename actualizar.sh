@@ -14,11 +14,6 @@ sed -i "101c $nueva_version" /home/pi/status.ini
 sed -i "17c $nueva_version" /home/pi/status.ini
 fi
 
-cd /home/pi/A108
-git pull
-
-
-
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
