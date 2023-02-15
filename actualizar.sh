@@ -14,6 +14,8 @@ sed -i "101c $nueva_version" /home/pi/status.ini
 sed -i "17c $nueva_version" /home/pi/status.ini
 fi
 
+cd /home/pi/A108
+git pull
 
 
 
