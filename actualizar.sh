@@ -1,5 +1,20 @@
 ﻿#!/bin/bash
 
+
+nueva_version=$(awk "NR==1" /home/pi/A108/version.ini)
+
+version_actual=$(awk "NR==100" /home/pi/status.ini)
+if [ "$version_actual" = $nueva_version ];then
+ 
+else
+cd /home/pi/A108/
+./qt_editor_general  
+sed -i "100c Version_1.0.1" /home/pi/status.ini
+fi
+
+
+
+
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
