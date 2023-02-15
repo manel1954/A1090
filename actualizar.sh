@@ -3,13 +3,13 @@
 
 nueva_version=$(awk "NR==1" /home/pi/A108/version.ini)
 
-version_actual=$(awk "NR==100" /home/pi/status.ini)
+version_actual=$(awk "NR==101" /home/pi/status.ini)
 if [ "$version_actual" = "$nueva_version" ];then
 echo "no hace nada"
 else
 cd /home/pi/A108/
  
-sed -i "100c $nueva_version" /home/pi/status.ini
+sed -i "101c $nueva_version" /home/pi/status.ini
 #./qt_editor_general 
 fi
 
