@@ -11,6 +11,7 @@ cd /home/pi/A108/
  
 sed -i "101c $nueva_version" /home/pi/status.ini
 #./qt_editor_general 
+sed -i "17c $nueva_version" /home/pi/status.ini
 fi
 
 
