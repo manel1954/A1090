@@ -1,17 +1,15 @@
 ﻿#!/bin/bash
 
-
-nueva_version=$(awk "NR==1" /home/pi/A108/version.ini)
+sudo sed -i "4c version_1" /var/www/html/version.php
+nueva_version=$(awk "NR==3" /var/www/html/version.php)
 
 version_actual=$(awk "NR==101" /home/pi/status.ini)
 if [ "$version_actual" = "$nueva_version" ];then
 echo "no hace nada"
 else
 cd /home/pi/A108/
- 
 sed -i "101c $nueva_version" /home/pi/status.ini
 #./qt_editor_general 
-sed -i "17c $nueva_version" /home/pi/status.ini
 fi
 
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
