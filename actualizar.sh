@@ -9,7 +9,7 @@ echo "no hace nada"
 else
 cd /home/pi/A108/
  
-sed -i "100c Version_1.0.1" /home/pi/status.ini
+sed -i "100c $nueva_version" /home/pi/status.ini
 #./qt_editor_general 
 fi
 
