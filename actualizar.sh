@@ -1,14 +1,13 @@
 ﻿#!/bin/bash
 
-sudo sed -i "2c //version_1" /var/www/html/txinfo.php
-nueva_version=$(awk "NR==3" /var/www/html/version.php)
+#sudo sed -i "2c //version_1" /var/www/html/txinfo.php
+nueva_version=$(awk "NR==2" /var/www/html/txinfo.php)
 
-version_actual=$(awk "NR==101" /home/pi/status.ini)
+version_actual=$(awk "NR==15" /var/www/html/txinfo.php)
 if [ "$version_actual" = "$nueva_version" ];then
 echo "no hace nada"
 else
-cd /home/pi/A108/
-sed -i "101c $nueva_version" /home/pi/status.ini
+sudo sed -i "15c $nueva_version" /var/www/html/txinfo.php
 #./qt_editor_general 
 fi
 
