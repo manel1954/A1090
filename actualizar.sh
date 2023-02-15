@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 
-sudo sed -i "4c version_1" /var/www/html/version.php
+sudo sed -i "2c //version_1" /var/www/html/txinfo.php
 nueva_version=$(awk "NR==3" /var/www/html/version.php)
 
 version_actual=$(awk "NR==101" /home/pi/status.ini)
