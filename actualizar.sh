@@ -10,7 +10,7 @@ else
 cd /home/pi/A108/
  
 sed -i "100c Version_1.0.1" /home/pi/status.ini
-./qt_editor_general 
+#./qt_editor_general 
 fi
 
 
