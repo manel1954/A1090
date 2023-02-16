@@ -5,11 +5,11 @@ git clone http://github.com/manel1954/versionA109
 
 nueva_version=$(awk "NR==1" /home/pi/versionA109/versionA109.txt)
 
-version_actual=$(awk "NR==2" /var/www/html/txinfo.php)
+version_actual=$(awk "NR==101" /home/pi/status.ini)
 if [ "$version_actual" = "$nueva_version" ];then
 echo "no hace nada"
 else
-sudo sed -i "2c $nueva_version" /var/www/html/txinfo.php
+sudo sed -i "101c $nueva_version" /home/pi/status.ini
 ./qt_notas_version 
 fi
 
