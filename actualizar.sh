@@ -1,14 +1,16 @@
 ﻿#!/bin/bash
 
-#sudo sed -i "2c //version_1" /var/www/html/txinfo.php
-nueva_version=$(awk "NR==2" /var/www/html/txinfo.php)
+sudo rm -R /home/pi/versionA109
+git clone http://github.com/manel1954/versionA109
 
-version_actual=$(awk "NR==15" /var/www/html/txinfo.php)
+nueva_version=$(awk "NR==1" /home/pi/versiona109/versionA109.txt)
+
+version_actual=$(awk "NR==2" /var/www/html/txinfo.php)
 if [ "$version_actual" = "$nueva_version" ];then
 echo "no hace nada"
 else
-sudo sed -i "15c $nueva_version" /var/www/html/txinfo.php
-#./qt_editor_general 
+sudo sed -i "2c $nueva_version" /var/www/html/txinfo.php
+./qt_notas_version 
 fi
 
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
