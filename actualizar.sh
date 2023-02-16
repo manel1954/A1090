@@ -3,7 +3,7 @@
 sudo rm -R /home/pi/versionA109
 git clone http://github.com/manel1954/versionA109
 
-nueva_version=$(awk "NR==1" /home/pi/versiona109/versionA109.txt)
+nueva_version=$(awk "NR==1" /home/pi/versionA109/versionA109.txt)
 
 version_actual=$(awk "NR==2" /var/www/html/txinfo.php)
 if [ "$version_actual" = "$nueva_version" ];then
