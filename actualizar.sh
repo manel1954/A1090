@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-
+cd /home/pi
 sudo rm -R /home/pi/versionA109
 git clone http://github.com/manel1954/versionA109
 
