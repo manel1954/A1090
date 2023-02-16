@@ -10,7 +10,7 @@ if [ "$version_actual" = "$nueva_version" ];then
 echo "no hace nada"
 else
 sudo sed -i "101c $nueva_version" /home/pi/status.ini
-./qt_notas_version 
+./qt_comprueba_version 
 fi
 
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
