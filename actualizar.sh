@@ -209,13 +209,13 @@ cd $usuario
 cp RXF_DSTAR.desktop $usuario/Desktop
 rm $usuario/RXF_DSTAR.desktop
 
-frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
-cd $usuario/Desktop/
-cp RXF_C4FM.desktop $usuario/
-sed -i "11c Name=$frecuencia" $usuario/RXF_C4FM.desktop
-cd $usuario
-cp RXF_C4FM.desktop $usuario/Desktop
-rm $usuario/RXF_C4FM.desktop
+#frecuencia=$(awk "NR==6" $usuario/INFO_RXF)
+#cd $usuario/Desktop/
+#cp RXF_C4FM.desktop $usuario/
+#sed -i "11c Name=$frecuencia" $usuario/RXF_C4FM.desktop
+#cd $usuario
+#cp RXF_C4FM.desktop $usuario/Desktop
+#rm $usuario/RXF_C4FM.desktop
 
 frecuencia=$(awk "NR==13" $usuario/INFO_RXF)
 cd $usuario/Desktop/
@@ -262,10 +262,10 @@ rm $usuario/RXF_DMRGATEWAY.desktop
 sudo chmod 777 -R $usuario/Desktop
 sleep 2
 
-sudo rm -R /home/pi/A108/associacioader.com
-sudo rm -R /home/pi/A108/Desktop/associacioader.com
-sudo rm /home/pi/A108/Desktop/st-data
-sudo rm /home/pi/Desktop/st-data
+#sudo rm -R /home/pi/A108/associacioader.com
+#sudo rm -R /home/pi/A108/Desktop/associacioader.com
+#sudo rm /home/pi/A108/Desktop/st-data
+#sudo rm /home/pi/Desktop/st-data
 
 
 /home/pi/A108/comprueba_version.sh
