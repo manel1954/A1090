@@ -268,4 +268,4 @@ sudo rm /home/pi/A108/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
 
 
-/home/pi/A108/comprueba_version.sh
+/home/pi/A108/comprueba_version.sh &
