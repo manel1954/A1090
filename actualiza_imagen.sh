@@ -12,7 +12,7 @@
                         sudo chmod 777 -R A108
                         cd /home/pi/.local
                         sudo rm -R D1090
-
+                        clear
                         cd /home/pi/A108
                         ./qt_imagen_actualizada
                         else
