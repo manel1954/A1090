@@ -1,9 +1,20 @@
 #!/bin/bash
+                        #Colores
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+MARRON="\33[38;5;138m"
+                        
+                        
                         cd /home/pi/.local
                         git clone http://github.com/manel1954/D1090
                         echo ""
                         echo ""
-                        echo ""
+                        echo -n "${AMARILLO}"
+                        echo "Actualizando...... espere por favor"
                         if [ -f /home/pi/.local/D1090/aviso ]
                         then
                         sudo rm -R /home/pi/A108
