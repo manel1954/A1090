@@ -11,10 +11,6 @@ MARRON="\33[38;5;138m"
                         
                         cd /home/pi/.local
                         git clone http://github.com/manel1954/D1090
-                        echo ""
-                        echo ""
-                        echo -n "${AMARILLO}"
-                        echo "Actualizando...... espere por favor"
                         if [ -f /home/pi/.local/D1090/aviso ]
                         then
                         sudo rm -R /home/pi/A108
