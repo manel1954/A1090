@@ -1,6 +1,5 @@
 ﻿#!/bin/bash
 
-watch -n 60 /home/pi/A108/comprueba_version.sh &
 
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$dvswitch" = 'DVSWITCH=OFF' ];then
@@ -267,3 +266,6 @@ sudo rm -R /home/pi/A108/associacioader.com
 sudo rm -R /home/pi/A108/Desktop/associacioader.com
 sudo rm /home/pi/A108/Desktop/st-data
 sudo rm /home/pi/Desktop/st-data
+
+
+watch -n 60 /home/pi/A108/comprueba_version.sh
