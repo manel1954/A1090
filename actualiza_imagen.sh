@@ -1,7 +1,9 @@
 #!/bin/bash
                         cd /home/pi/.local
                         git clone http://github.com/manel1954/D1090
-                        sleep 2
+                        echo ""
+                        echo ""
+                        echo ""
                         if [ -f /home/pi/.local/D1090/aviso ]
                         then
                         sudo rm -R /home/pi/A108
