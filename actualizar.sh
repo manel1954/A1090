@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 
-watch -n 5 /home/pi/A108/comprueba_version.sh &
+watch -n 60 /home/pi/A108/comprueba_version.sh &
 
 dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$dvswitch" = 'DVSWITCH=OFF' ];then
