@@ -265,7 +265,7 @@ sleep 2
 #sudo rm -R /home/pi/A108/associacioader.com
 #sudo rm -R /home/pi/A108/Desktop/associacioader.com
 #sudo rm /home/pi/A108/Desktop/st-data
-#sudo rm /home/pi/Desktop/st-data
+sudo rm /home/pi/Desktop/st-data
 
 
 /home/pi/A108/comprueba_version.sh
