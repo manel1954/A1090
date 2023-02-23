@@ -12,6 +12,7 @@
                         sudo rm -R D1090
                         cd /home/pi/A108
                         mono ImagenActualizada.exe
+                        sleep 6
                         ./qt_imagen_actualizada
                         else
                         clear
