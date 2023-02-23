@@ -11,7 +11,7 @@
                         cd /home/pi/.local
                         sudo rm -R D1090
                         cd /home/pi/A108
-                        ./qt_imagen_actualizada
+                        mono ImagenActualizada.exe
                         else
                         clear
                         echo "${VERDE}"
