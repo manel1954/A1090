@@ -1,4 +1,4 @@
 #!/bin/bash                       
 
-                        cd /home/pi
-                        mono ActualizarImagen.exe
+                        cd /home/pi/A108
+                        mono ImagenActualizada.exe
