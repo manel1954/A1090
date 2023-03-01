@@ -16,7 +16,7 @@ MARRON="\33[38;5;138m"
                         echo "*****************************************************************************"
                         echo "*****************************************************************************"
                         sleep 5
-                        estado=$(awk "NR==45" /home/pi/info.ini) #OJO!!! CAMBIAR A SU NUMEO *********************
+                        estado=$(awk "NR==35" /home/pi/info.ini) #OJO!!! CAMBIAR A SU NUMEO *********************
                         if [ $estado = 3 ]
                         then
                         sudo sed -i "522c ENABLED: True" /opt/HBlink3/hblink.cfg #OJO!!! CAMBIAR A SU NUMEO *********************
@@ -39,7 +39,7 @@ MARRON="\33[38;5;138m"
                         sudo systemctl restart hbmon
                         sudo systemctl restart hblink
                         
-                        sudo sed -i "45c 2" /home/pi/info.ini #OJO!!! CAMBIAR A SU NUMEO *********************
+                        sudo sed -i "35c 2" /home/pi/info.ini #OJO!!! CAMBIAR A SU NUMEO *********************
                         clear
                         echo "\v\v\v"
                         echo "${AMARILLO}"
@@ -50,7 +50,7 @@ MARRON="\33[38;5;138m"
                         echo "*****************************************************************************"
                         sleep 5
                         exit
-                        elif [ $estado = 45 ] #OJO!!! CAMBIAR A SU NUMEO *********************
+                        elif [ $estado = 35 ] #OJO!!! CAMBIAR A SU NUMEO *********************
                         then
                         clear
                         echo "\v\v\v"

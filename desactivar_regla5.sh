@@ -16,7 +16,7 @@ MARRON="\33[38;5;138m"
                         echo "*****************************************************************************"
                         echo "*****************************************************************************"
                         sleep 5
-                        estado=$(awk "NR==45" /home/pi/info.ini) # OJO CAMBIAR POR SU NUMERO ********
+                        estado=$(awk "NR==35" /home/pi/info.ini) # OJO CAMBIAR POR SU NUMERO ********
                         if [ $estado = 2 ]
                         then
 
@@ -37,7 +37,7 @@ MARRON="\33[38;5;138m"
                         sudo systemctl restart hbmon
                         sudo systemctl restart hblink
 
-                        sudo sed -i "45c 3" /home/pi/info.ini # OJO CAMBIAR POR SU NUMERO ********
+                        sudo sed -i "35c 3" /home/pi/info.ini # OJO CAMBIAR POR SU NUMERO ********
                         
                         clear
                         echo "\v\v\v"
@@ -49,7 +49,7 @@ MARRON="\33[38;5;138m"
                         echo "*****************************************************************************"
                         sleep 5
                         exit
-                        elif [ $estado = 45 ] # OJO CAMBIAR POR SU NUMERO ********
+                        elif [ $estado = 35 ] # OJO CAMBIAR POR SU NUMERO ********
                         then
                         clear
                         echo "\v\v\v"
