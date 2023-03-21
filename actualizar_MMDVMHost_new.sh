@@ -9,6 +9,8 @@
                     cd ArduiPi_OLED
                     sudo make clean
                     sudo make
+                    cd MMDVMHost
+                    make -f Makefile.Pi.OLED
                                     
                     cd /home/pi/MMDVMHost
 
