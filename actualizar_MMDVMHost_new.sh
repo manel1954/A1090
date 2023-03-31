@@ -9,14 +9,13 @@
                     cd ArduiPi_OLED
                     sudo make clean
                     sudo make
-                    cd MMDVMHost
-                    make -f Makefile.Pi.OLED
+                    
                                     
                     cd /home/pi/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI="ADER108"\"
+                    PI="ADER109"\"
                     HOY1=$HOY$PI
                     PUNTO=";"   
                     
