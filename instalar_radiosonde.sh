@@ -13,7 +13,9 @@ cp station.cfg.example station.cfg
 
 cd ~/radiosonde_auto_rx/auto_rx/
 python3 -m venv venv
+sleep 10
 source venv/bin/activate
+sleep 5
 
 rm -rf ~/.cache/pip
 pip install -r requirements.txt
