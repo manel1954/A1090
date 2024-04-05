@@ -4,19 +4,21 @@ sudo apt-get install libusb-1.0-0-dev rng-tools libsamplerate-dev libatlas3-base
 
 cd ~
 
+rm -R ~/radiosonde_auto_rx/auto_rx
+
 git clone https://github.com/projecthorus/radiosonde_auto_rx.git
 cd radiosonde_auto_rx/auto_rx
 ./build.sh
 cp station.cfg.example station.cfg
 
-sudo cp auto_rx.service /etc/systemd/system/
-
 cd ~/radiosonde_auto_rx/auto_rx/
 python3 -m venv venv
 source venv/bin/activate
+
 rm -rf ~/.cache/pip
 pip install -r requirements.txt
 
+sudo cp auto_rx.service /etc/systemd/system/
 sudo systemctl enable auto_rx.service
 sudo systemctl start auto_rx.service
 
